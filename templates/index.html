@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic Survival Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Titanic Survival Predictor</h2>
+
+    <form action="/predict" method="POST">
+
+        <label style="color: black" for="sex">Sex</label>
+        <select name="Sex" id="sex">
+            <option style="color: black" value="Male">Male</option>
+            <option style="color: black" value="Female">Female</option>
+        </select>
+        <br>
+
+        <label for="">Fare</label>
+        <input type="text" name ='Fare'>
+        <br>
+
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h3  style="color: black"  >Result: {{prediction}}</h3>
+    {% endif %}
+</body>
+</html>

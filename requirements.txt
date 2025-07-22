@@ -1,0 +1,7 @@
+#All Libraries we need
+Flask
+scikit-learn
+pandas
+numpy
+joblib #storing the ML in file pickle file
+gunicorn #deployment
